@@ -1,13 +1,11 @@
 <?php 
 include 'koneksi.php'; 
 
-// Ambil ID dan Data
 $id = $_GET['id'];
 $query = "SELECT * FROM kontak WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $data = mysqli_fetch_assoc($result);
 
-// Validasi jika ID tidak ditemukan
 if (!$data) { header("Location: index.php"); exit(); }
 ?>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phonebook Canggih</title>
+    <title>Praktikum DB Azure</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@
     
     <style>
         body { font-family: 'Poppins', sans-serif; background-color: #f0f2f5; }
-        /* CSS tombol bulat dihapus karena sekarang pakai teks */
+
         .dataTables_wrapper .dataTables_paginate .paginate_button { padding: 0 !important; margin: 0 5px; }
         table.dataTable thead th { border-bottom: none; }
     </style>
