@@ -1,8 +1,6 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-// Logika HYBRID (Otomatis deteksi Local atau Azure)
-// Jika Azure memberikan data DB_HOST, pakai itu. Jika tidak, pakai localhost.
 $host = getenv('DB_HOST') ? getenv('DB_HOST') : "localhost";
 $user = getenv('DB_USERNAME') ? getenv('DB_USERNAME') : "root";
 $pass = getenv('DB_PASSWORD') ? getenv('DB_PASSWORD') : ""; // Password XAMPP kosong
