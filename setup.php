@@ -1,10 +1,8 @@
 <?php
-// 1. Ambil Username & Password dari Azure Environment (Tanpa Nama Database)
 $host = getenv('DB_HOST');
 $user = getenv('DB_USERNAME');
 $pass = getenv('DB_PASSWORD');
 
-// 2. Login ke MySQL Azure (Tanpa memilih database dulu)
 $conn = mysqli_connect($host, $user, $pass);
 
 if (!$conn) {
@@ -13,7 +11,6 @@ if (!$conn) {
     echo "<h3>Berhasil Login ke Server MySQL!</h3>";
 }
 
-// 3. Perintah Membuat Database 'no_kontak'
 $sql_buat_db = "CREATE DATABASE IF NOT EXISTS no_kontak";
 
 if (mysqli_query($conn, $sql_buat_db)) {
@@ -22,10 +19,8 @@ if (mysqli_query($conn, $sql_buat_db)) {
     die("Gagal buat database: " . mysqli_error($conn));
 }
 
-// 4. Masuk ke Database baru itu
 mysqli_select_db($conn, "no_kontak");
 
-// 5. Buat Tabel 'kontak'
 $sql_buat_tabel = "CREATE TABLE IF NOT EXISTS kontak (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
